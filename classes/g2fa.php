@@ -27,7 +27,7 @@ class G2FA
 
     public static function getQRCodeUrl($name, $secret)
     {
-        $config = \Fuel\Core\Config::load('tsauthverify', true);
+        $config = \Fuel\Core\Config::load('g2fa', true);
         $urlencoded_str = urlencode('otpauth://totp/' . $name . '?secret=' . $secret);
         if(isset($config['title']))
         {
