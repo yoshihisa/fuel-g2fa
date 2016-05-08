@@ -1,9 +1,11 @@
 {
     "name": "yoshihisa/fuel-g2fa",
-    "description": "Google 2-Step Verification for Fuel",
+    "description": "Google 2-Step Verification for FuelPHP",
+    "keywords": ["Google Authenticator", "2-step auth", "2-factor auth"],
     "type": "fuel-package",
     "license": "MIT",
     "minimum-stability": "stable",
+    "homepage": "https://github.com/yoshihisa/fuel-g2fa",
     "require": {
         "christian-riesen/base32": "~1.3.0"
     },
