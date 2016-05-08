@@ -18,7 +18,6 @@ class G2FA
     public static function createSecret()
     {
         $base32_str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
-        mt_srand(hexdec(openssl_random_pseudo_bytes(4)));
         $secret = '';
         for ($i = 0; $i < self::SECRET_LENGTH; $i++) {
             $secret .= $base32_str[mt_rand(0, 31)];
