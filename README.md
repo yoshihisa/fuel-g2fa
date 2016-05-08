@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/yoshihisa/fuel-g2fa.svg?branch=master)](https://travis-ci.org/yoshihisa/fuel-g2fa)
 # fuel-g2fa
 
 This package is 2-factor authentication with Google Authenticator for FuelPHP.
