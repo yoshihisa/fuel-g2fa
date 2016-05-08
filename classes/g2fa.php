@@ -44,7 +44,8 @@ class G2FA
         $hmac = hash_hmac('SHA1', $binaryTimestamp, $secretKey, true);
         $offset = ord(substr($hmac, -1)) & 0xF;
         $part = substr($hmac, $offset, 4);
-        $unpack_value = unpack('N', $part)[1];
+        $unpack_value_array = unpack('N', $part);
+        $unpack_value = $unpack_value_array[1];
         $seed = $unpack_value & 0x7FFFFFFF;
         $pow = pow(10, self::CODE_LENGTH);
         return str_pad($seed % $pow, self::CODE_LENGTH,  '0', STR_PAD_LEFT);
