@@ -44,14 +44,14 @@ class Test_Twostepauthverify extends \PHPUnit_Framework_TestCase
         $timeSlice = 48756793;
         $actual = \G2FA\G2FA::getCode($secret, $timeSlice);
         $this->assertEquals(6, strlen($actual));
-        $this->assertEquals(388927, $actual);
+        $this->assertEquals(553974, $actual);
     }
 
     public function testVerifyCode()
     {
         $secret = 'OSWET3R3NTLTRJDB';
         $timeSlice = 48756793;
-        $actual = \G2FA\G2FA::verifyCode($secret, 388927, 1, $timeSlice);
+        $actual = \G2FA\G2FA::verifyCode($secret, 553974, 1, $timeSlice);
         $this->assertEquals(true, $actual);
     }
 }

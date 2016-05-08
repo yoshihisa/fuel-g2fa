@@ -43,7 +43,7 @@ class G2FA
         $binaryTimestamp = pack('N*', 0) . pack('N*', $timeSlice);
         $hmac = hash_hmac('SHA1', $binaryTimestamp, $secretKey, true);
         $offset = ord(substr($hmac, -1)) & 0xF;
-        $part = substr($hmac, 4);
+        $part = substr($hmac, $offset, 4);
         $unpack_value = unpack('N', $part)[1];
         $seed = $unpack_value & 0x7FFFFFFF;
         $pow = pow(10, self::CODE_LENGTH);
